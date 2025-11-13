@@ -1,39 +1,113 @@
-# contacts-app1
+# 📇 Контакты CRM
 
-This template should help get you started developing with Vue 3 in Vite.
+Простое и удобное SPA-приложение для управления контактами, созданное на **Vue 3** с использованием **Pinia**, **Vue Router**, и **Toastify** для уведомлений.  
+Позволяет добавлять, редактировать, удалять и просматривать список контактов с реального REST API (например, через `json-server`).
 
-## Recommended IDE Setup
+---
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+## 🚀 Возможности
 
-## Recommended Browser Setup
+- 📋 Просмотр списка всех контактов  
+- ➕ Добавление нового контакта  
+- ✏️ Редактирование существующего контакта  
+- 🗑️ Удаление с подтверждением через модальное окно  
+- 🔍 Поиск по имени  
+- ⚙️ Валидация данных при вводе:
+  - Имя — минимум **4 символа**
+  - Телефон — должен начинаться с **+992** и содержать **ровно 12 цифр**
+  - Email — должен быть корректным (`@` и окончание `.com`, `.ru`, `.de`, `.net`, `.org`, `.tj`)
+- 🔔 Уведомления через **Toastify**
+- 💾 Работа с **json-server** (REST API)
+- 📱 Адаптивный дизайн (mobile / desktop)
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd) 
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
+---
 
-## Customize configuration
+## 🛠️ Используемые технологии
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+- [Vue 3 (Composition API)](https://vuejs.org/)
+- [Pinia (глобальное состояние)](https://pinia.vuejs.org/)
+- [Vue Router](https://router.vuejs.org/)
+- [Toastify.js](https://github.com/apvarun/toastify-js)
+- [Font Awesome](https://fontawesome.com/)
+- [json-server (mock REST API)](https://github.com/typicode/json-server)
 
-## Project Setup
+---
 
-```sh
+## 📂 Структура проекта
+
+
+src/
+┣ assets/
+┣ components/
+┣ pages/
+┃ ┣ Home.vue
+┃ ┣ AddContact.vue
+┃ ┗ EditContact.vue
+┣ store/
+┃ ┗ contacts.js
+┣ router/
+┃ ┗ index.js
+┣ App.vue
+┗ main.js
+
+
+
+
+---
+
+## ⚙️ Установка и запуск проекта
+
+### 1. Клонирование репозитория
+```bash
+git clone https://github.com/username/contacts-crm.git
+cd contacts-crm
+
+
+
+Установка зависимостей
+
 npm install
-```
 
-### Compile and Hot-Reload for Development
 
-```sh
+Установка и запуск JSON Server
+
+npm install -g json-server
+json-server --watch db.json --port 3000
+
+
+Создай файл db.json в корне проекта:
+
+{
+  "contacts": []
+}
+
+Запуск приложения
+
 npm run dev
-```
 
-### Compile and Minify for Production
 
-```sh
-npm run build
-```
-# ContactFormVueJS
+
+После запуска:
+
+Приложение доступно по адресу: http://localhost:5173
+API работает по адресу: http://localhost:3000/contacts
+
+
+
+
+Все сетевые запросы обернуты в try/catch для безопасной обработки ошибок.
+
+Валидация выполняется на клиентской стороне через Toastify.
+
+Для тестирования можно добавить данные вручную в db.json.
+
+В случае отсутствия соединения с сервером пользователь увидит сообщение об ошибке (ErrorMessage.vue).
+
+
+
+
+Автор проекта
+
+Umidjon Burkhonov
+Frontend Developer 
+📧 Email: u.burkhonov99@gmail.com

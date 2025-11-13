@@ -71,19 +71,19 @@
 
 ### Установка и запуск JSON Server
 
-npm install -g json-server
-json-server --watch db.json --port 3000
+`npm install -g json-server`
+`json-server --watch db.json --port 3000`
 
 
 ### Создай файл db.json в корне проекта:
 
-{
-  "contacts": []
-}
+``{``
+  ``"contacts": []``
+``}``
 
 ### Запуск приложения
 
-npm run dev
+`npm run dev`
 
 
 
@@ -92,7 +92,7 @@ npm run dev
 - Приложение доступно по адресу: http://localhost:5173
 - API работает по адресу: http://localhost:3000/contacts
 
-
+---
 
 
 - Все сетевые запросы обернуты в try/catch для безопасной обработки ошибок.
@@ -107,4 +107,4 @@ npm run dev
 
 - Umidjon Burkhonov
 - Frontend Developer 
-- 📧 [Email]: (u.burkhonov99@gmail.com)
+- 📧 Email: (u.burkhonov99@gmail.com)

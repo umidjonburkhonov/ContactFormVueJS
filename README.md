@@ -59,14 +59,14 @@
 
 ### 1. Клонирование репозитория
 
-git clone https://github.com/username/contacts-crm.git
-cd contacts-crm
+- git clone https://github.com/username/contacts-crm.git
+- cd contacts-crm
 
 
 
 ### Установка зависимостей
 
-npm install
+`npm install`
 
 
 ### Установка и запуск JSON Server
@@ -105,6 +105,6 @@ npm run dev
 
 ## Автор проекта
 
-Umidjon Burkhonov
-Frontend Developer 
-📧 [Email]: (u.burkhonov99@gmail.com)
+- Umidjon Burkhonov
+- Frontend Developer 
+- 📧 [Email]: (u.burkhonov99@gmail.com)
